@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timeline</title>
+</head>
+<link rel="stylesheet" href="reset.css">
+<style>
+  body{
+    text-align: center;
+  }
+  .frame{
+    margin: 20px;
+    display: inline-block;
+    width: 1000px;
+    height: 300px;
+    background-color: #aaa;
+    overflow: auto;
+    border: 2px solid #f00;
+  }
+  .time{
+    width: 1000px;
+    height: 100%;
+    /*box-shadow: 0 0 0 5px #f00 inset;*/
+    font-size: 0;
+  }
+  .grid{
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    box-shadow: inset 1px 0 0 0 #000;
+    /*border-left: 1px solid #000;*/
+  }
+  .grid:first-child{
+    box-shadow: none;
+  }
+</style>
+<body>
+
+  <div class="frame">
+    <div class="time">
+      <div class="grid grid-01"></div>
+      <div class="grid grid-02"></div>
+      <div class="grid grid-03"></div>
+      <div class="grid grid-04"></div>
+      <div class="grid grid-05"></div>
+      <div class="grid grid-06"></div>
+      <div class="grid grid-07"></div>
+      <div class="grid grid-08"></div>
+      <div class="grid grid-09"></div>
+      <div class="grid grid-10"></div>
+    </div>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+
+    $(function(){
+
+      $('.grid').on('click', createText)
+
+      function createText(){
+        console.log($('.grid').mouse());
+      }
+
+    })
+
+  </script>
+
+</body>
+</html>
